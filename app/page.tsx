@@ -1,3 +1,4 @@
+import { Issue, ProjectProgress } from "@/components/project-progress";
 import { Progress } from "@/components/ui/progress";
 import { Press_Start_2P } from "next/font/google";
 
@@ -6,27 +7,27 @@ const pressStart2P = Press_Start_2P({
     subsets: ["cyrillic"],
 });
 
-export default function Home() {
-    //  TODO: Move to colors later
-    const GREY_AZURE = "#365b6d";
-    const CYAN = "#41c1ba";
-    const LIGHT_GREY = "#f7f7f7";
+const MOCK_ISSUE_1: Issue = {
+    title: "Create the frontend of the app",
+    isCompleted: true,
+};
+const MOCK_ISSUE_2: Issue = {
+    title: "Create the backend of the app",
+    isCompleted: false,
+};
+const MOCK_ISSUE_3: Issue = {
+    title: "Connect both of the apps",
+    isCompleted: false,
+};
 
+const MOCK_ISSUES = [MOCK_ISSUE_1, MOCK_ISSUE_2, MOCK_ISSUE_3];
+
+export default function Home() {
     return (
         <div
             className={`bg-background flex h-screen w-full items-center justify-center ${pressStart2P.className} `}
         >
-            <div className="flex w-full flex-col">
-                <p className="text-overlay-primary mb-5 text-5xl">
-                    Project Progress
-                </p>
-                <Progress
-                    value={50}
-                    className="h-12"
-                    indicatorColor={CYAN}
-                    backgroundColor={GREY_AZURE}
-                />
-            </div>
+            <ProjectProgress text="Project Progress" issues={MOCK_ISSUES} />
         </div>
     );
 }
