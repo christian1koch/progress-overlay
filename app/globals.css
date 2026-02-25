@@ -41,6 +41,9 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
+    --color-overlay-secondary: var(--color-overlay-secondary);
+    --color-overlay-primary: var(--color-overlay-primary);
+    --color-overlay-white: var(--color-overlay-white);
 }
 
 :root {
@@ -76,6 +79,9 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --color-overlay-secondary: #365b6d;
+    --color-overlay-primary: #41c1ba;
+    --color-overlay-white: #f7f7f7;
 }
 
 .dark {
@@ -110,6 +116,9 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+    --color-overlay-secondary: #365b6d;
+    --color-overlay-primary: #41c1ba;
+    --color-overlay-white: #f7f7f7;
 }
 
 @layer base {
