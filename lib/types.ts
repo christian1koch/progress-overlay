@@ -4,6 +4,6 @@ export interface Issue {
 }
 
 export interface GithubIssue {
-    state: "open" | "closed" | "all";
-    title: "string";
+    state: string;
+    title: string;
 }
