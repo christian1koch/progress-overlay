@@ -1,5 +1,6 @@
 "use client";
 import { fetchIssues } from "@/app/lib/actions";
+import { useFetchIssuesInInterval } from "@/app/lib/hooks/useFetchIssuesInInterval";
 import { Issue, ProjectProgress } from "@/components/project-progress";
 import { GithubIssue } from "@/lib/types";
 import { Press_Start_2P } from "next/font/google";
@@ -14,16 +15,7 @@ const githubIssuesToIssues = (githubIssue: GithubIssue) => {
 };
 
 export default function ProgressPage() {
-    const [issues, setIssues] = useState<Issue[]>();
-    const fetchData = async () => {
-        const newIssues = await fetchIssues();
-        setIssues(newIssues);
-    };
-    useEffect(() => {
-        const intervalId = setInterval(fetchData, 10000);
-
-        return () => clearInterval(intervalId);
-    }, []);
+    const issues = useFetchIssuesInInterval(10000);
 
     if (!issues) {
         return "No Issues";
