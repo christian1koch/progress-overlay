@@ -26,7 +26,7 @@ export function ProjectProgress({ text, issues }: ProjectProgress) {
                 Project Progress
             </p>
             <Progress
-                value={50}
+                value={(completedIssues.length / issues.length) * 100}
                 className="h-12"
                 indicatorColor={CYAN}
                 backgroundColor={GREY_AZURE}
