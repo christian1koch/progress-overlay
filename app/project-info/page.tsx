@@ -21,7 +21,7 @@ export default function ProjectInfoPage() {
                     ]}
                 />
             </div>
-            <div className="flex max-h-32 flex-col flex-wrap text-sm">
+            <div className="flex max-h-32 flex-wrap gap-4 text-sm">
                 {closedIssues &&
                     closedIssues.map((issue) => (
                         <CheckboxWithText title={issue.title} checked={true} />
