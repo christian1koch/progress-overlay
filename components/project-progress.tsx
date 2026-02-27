@@ -1,8 +1,8 @@
 import { Progress } from "./ui/progress";
 
 //  TODO: Move to colors later
-const GREY_AZURE = "#365b6d";
-const CYAN = "#41c1ba";
+const GREY_AZURE = "#510424";
+const CYAN = "oklch(65.6% 0.241 354.308)";
 const LIGHT_GREY = "#f7f7f7";
 
 export interface Issue {

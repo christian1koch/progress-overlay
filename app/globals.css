@@ -80,7 +80,7 @@
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
     --color-overlay-secondary: #365b6d;
-    --color-overlay-primary: #41c1ba;
+    --color-overlay-primary: oklch(65.6% 0.241 354.308);
     --color-overlay-white: #f7f7f7;
 }
 
@@ -117,8 +117,11 @@
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
     --color-overlay-secondary: #365b6d;
-    --color-overlay-primary: #41c1ba;
+    --color-overlay-primary: oklch(65.6% 0.241 354.308);
     --color-overlay-white: #f7f7f7;
+}
+nextjs-portal {
+    display: none;
 }
 
 @layer base {
