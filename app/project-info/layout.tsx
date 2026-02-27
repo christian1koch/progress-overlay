@@ -1,6 +1,6 @@
-import { Press_Start_2P } from "next/font/google";
+import { Source_Code_Pro as our_Font } from "next/font/google";
 
-const pressStart2P = Press_Start_2P({
+const pressStart2P = our_Font({
     weight: "400",
     subsets: ["cyrillic"],
 });
@@ -12,7 +12,7 @@ export default function ProjectLayout({
     return (
         <html lang="en">
             <body>
-                <main>{children}</main>
+                <main className={`${pressStart2P.className}`}>{children}</main>
             </body>
         </html>
     );
