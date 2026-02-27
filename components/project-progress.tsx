@@ -16,10 +16,13 @@ interface ProjectProgress {
 }
 export function ProjectProgress({ text, issues }: ProjectProgress) {
     const completedIssues = issues.filter((issue) => issue.isCompleted);
-    const completedText = `${completedIssues.length} / ${issues.length} Project Tasks completed`;
+    const completedText = `${completedIssues.length} / ${issues.length} Tasks completed`;
     return (
         <div className="flex w-full flex-col">
-            <p className="text-overlay-primary mb-6 text-5xl">
+            <p
+                className="text-overlay-primary mb-6 text-5xl"
+                style={{ WebkitTextStroke: 3, WebkitTextStrokeColor: "black" }}
+            >
                 Project Progress
             </p>
             <Progress
@@ -28,7 +31,12 @@ export function ProjectProgress({ text, issues }: ProjectProgress) {
                 indicatorColor={CYAN}
                 backgroundColor={GREY_AZURE}
             />
-            <p className="text-overlay-white mt-2 text-2xl">{completedText}</p>
+            <p
+                className="text-overlay-white mt-2 text-4xl"
+                style={{ WebkitTextStroke: 2, WebkitTextStrokeColor: "black" }}
+            >
+                {completedText}
+            </p>
         </div>
     );
 }

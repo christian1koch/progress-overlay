@@ -25,7 +25,7 @@ const MOCK_ISSUES = [MOCK_ISSUE_1, MOCK_ISSUE_2, MOCK_ISSUE_3];
 export default function Home() {
     return (
         <div
-            className={`bg-background flex h-screen w-full items-center justify-center ${pressStart2P.className} `}
+            className={`flex h-screen w-full items-center justify-center ${pressStart2P.className} `}
         >
             <ProjectProgress text="Project Progress" issues={MOCK_ISSUES} />
         </div>
