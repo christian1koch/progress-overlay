@@ -42,7 +42,7 @@
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
     --color-overlay-secondary: var(--color-overlay-secondary);
-    --color-overlay-primary: var(--color-overlay-primary);
+    --color-overlay-primary: var(--color-pink-500);
     --color-overlay-white: var(--color-overlay-white);
 }
 
