@@ -19,10 +19,7 @@ export function ProjectProgress({ text, issues }: ProjectProgress) {
     const completedText = `${completedIssues.length} / ${issues.length} Tasks completed`;
     return (
         <div className="flex w-full flex-col">
-            <p
-                className="text-overlay-primary mb-6 text-5xl"
-                style={{ WebkitTextStroke: 3, WebkitTextStrokeColor: "black" }}
-            >
+            <p className="text-overlay-primary mb-6 text-5xl">
                 Project Progress
             </p>
             <Progress
@@ -31,12 +28,7 @@ export function ProjectProgress({ text, issues }: ProjectProgress) {
                 indicatorColor={CYAN}
                 backgroundColor={GREY_AZURE}
             />
-            <p
-                className="text-overlay-white mt-2 text-4xl"
-                style={{ WebkitTextStroke: 2, WebkitTextStrokeColor: "black" }}
-            >
-                {completedText}
-            </p>
+            <p className="text-overlay-white mt-2 text-4xl">{completedText}</p>
         </div>
     );
 }
