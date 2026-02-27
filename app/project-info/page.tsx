@@ -2,29 +2,34 @@
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { useFetchIssuesInInterval } from "../lib/hooks/useFetchIssuesInInterval";
+import Marquee from "@/components/ui/marquee";
 
 export default function ProjectInfoPage() {
     const issues = useFetchIssuesInInterval(10000);
-    if (!issues) {
-        return;
-    }
-    const closedIssues = issues.filter((issue) => issue.isCompleted);
-    const openIssues = issues.filter((issue) => !issue.isCompleted);
+
+    const closedIssues = issues?.filter((issue) => issue.isCompleted);
+    const openIssues = issues?.filter((issue) => !issue.isCompleted);
     return (
         <div className="w-full">
-            <div className="bg-overlay-secondary flex items-baseline justify-around">
-                <h1>Project: Configurable Twitch Overlay</h1>
-                <h2 className="text-xs">
-                    Github Link: christian1koch/progress-overlay
-                </h2>
+            <div className="flex justify-around">
+                <Marquee
+                    items={[
+                        "Configurable Twitch Overlay",
+                        "♣",
+                        "Github Link: christian1koch/progress-overlay",
+                        "♣",
+                    ]}
+                />
             </div>
             <div className="flex max-h-32 flex-col flex-wrap text-sm">
-                {closedIssues.map((issue) => (
-                    <CheckboxWithText title={issue.title} checked={true} />
-                ))}
-                {openIssues.map((issue) => (
-                    <CheckboxWithText title={issue.title} checked={false} />
-                ))}
+                {closedIssues &&
+                    closedIssues.map((issue) => (
+                        <CheckboxWithText title={issue.title} checked={true} />
+                    ))}
+                {openIssues &&
+                    openIssues.map((issue) => (
+                        <CheckboxWithText title={issue.title} checked={false} />
+                    ))}
             </div>
         </div>
     );

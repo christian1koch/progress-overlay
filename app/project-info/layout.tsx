@@ -1,8 +1,8 @@
-import { Source_Code_Pro as our_Font } from "next/font/google";
+import { Bricolage_Grotesque as our_Font } from "next/font/google";
 
 const pressStart2P = our_Font({
     weight: "400",
-    subsets: ["cyrillic"],
+    subsets: ["latin"],
 });
 export default function ProjectLayout({
     children,
