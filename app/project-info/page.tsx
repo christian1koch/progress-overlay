@@ -7,8 +7,10 @@ import Marquee from "@/components/ui/marquee";
 export default function ProjectInfoPage() {
     const issues = useFetchIssuesInInterval(10000);
 
-    const closedIssues = issues?.filter((issue) => issue.isCompleted);
-    const openIssues = issues?.filter((issue) => !issue.isCompleted);
+    const orderedIssues = issues?.sort((a, b) => a.id - b.id);
+
+    const closedIssues = orderedIssues?.filter((issue) => issue.isCompleted);
+    const openIssues = orderedIssues?.filter((issue) => !issue.isCompleted);
     return (
         <div className="w-full">
             <div className="flex justify-around">
@@ -42,7 +44,7 @@ const CheckboxWithText = ({
     title: string;
     checked: boolean;
 }) => (
-    <div className="mt-1 flex items-center justify-baseline gap-1">
+    <div className="mt-1 flex items-center justify-baseline gap-1 font-bold">
         <Checkbox checked={checked} />
         {checked ? (
             <p className="text-overlay-white/50 line-through">{title}</p>

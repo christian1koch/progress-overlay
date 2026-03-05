@@ -8,6 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function githubIssuesToIssues<T extends GithubIssue>(githubIssue: T) {
     const issue: Issue = {
+        id: githubIssue.id,
         title: githubIssue.title,
         isCompleted: githubIssue.state === "closed",
     };
