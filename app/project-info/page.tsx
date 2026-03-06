@@ -16,9 +16,9 @@ export default function ProjectInfoPage() {
             <div className="flex justify-around">
                 <Marquee
                     items={[
-                        "Configurable Twitch Overlay",
+                        "Estudiando derivadas",
                         "♣",
-                        "Github Link: christian1koch/progress-overlay",
+                        "Github Link: christian1koch",
                         "♣",
                     ]}
                 />

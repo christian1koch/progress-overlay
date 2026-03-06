@@ -9,7 +9,7 @@ export async function fetchIssues() {
     // sends request with `Authorization: token mypersonalaccesstoken123` header
     const { data } = await octokit.rest.issues.listForRepo({
         owner: "christian1koch",
-        repo: "progress-overlay",
+        repo: "Learning-MCP",
         state: "all",
     });
 
