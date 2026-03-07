@@ -16,10 +16,10 @@ export default function ProjectInfoPage() {
             <div className="flex justify-around">
                 <Marquee
                     items={[
-                        "Learning how to make youtube videos",
-                        "♣",
+                        "Stuying Math",
+                        "✿",
                         "Github Link: christian1koch",
-                        "♣",
+                        "✿",
                     ]}
                 />
             </div>
